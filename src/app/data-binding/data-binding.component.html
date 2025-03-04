@@ -1,0 +1,55 @@
+<section class="home">
+    <div class="container  my-5">
+        <div class="card">
+            <div class="card-header">
+                <h3>Data Binding </h3>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="card">
+                        <div class="card-body row">
+                            <div class="col-lg-4">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4>Interpolation:-</h4><hr>
+                                        <p>Output - <b>{{ title }}</b></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4>Property Binding:-</h4><hr>
+                                        <img [src]="imageUrl" alt class="img-fluid w-25">
+                                        <button class="btn btn-secondary" [disabled]="isDisabled">Disable Button</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4>Event Binding</h4>
+                                        <hr>
+                                        <p><b>Count :- </b> <span class="bg-secondary text-light px-2 py-1">{{ count }}</span></p>
+                                        <button *ngIf="count > 0" (click)="decrement()" class="btn btn-sm btn-danger">-</button>
+                                        <button (click)="increment()" class="btn btn-sm btn-primary ms-1">+</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4>Two Way Binding</h4>
+                                        <hr>
+                                        <input type="text" [(ngModel)] = "value" class="mb- form-control">
+                                        <p><b>Output : </b> {{ value }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

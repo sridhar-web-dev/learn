@@ -1,0 +1,81 @@
+<section class="home">
+  <div class="container  my-5">
+    <div class="card">
+      <div class="card-header">
+        <h3>Directives</h3>
+      </div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="card mb-3">
+              <div class="card-body">
+                <h5>*ngSwitch</h5>
+                <hr>
+                <div [ngSwitch]="orderStatus">
+                  <p *ngSwitchCase="'Completed'"> Completd </p>
+                  <p *ngSwitchCase="'Pending'"> Pending </p>
+                  <p *ngSwitchCase="'OnProgress'">On Process</p>
+                  <p *ngSwitchDefault>Status Not Updated</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="card mb-3">
+              <div class="card-body">
+                <h5>*ngFor (Array)</h5>
+                <hr>
+                <ul>
+                  <li *ngFor="let product of productsWithPrice">{{ product[0] }}
+                    - Pricc - {{ product[1] }}</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="card mb-3">
+              <div class="card-body">
+                <h5>*ngFor (Object)</h5>
+                <hr>
+                <ul>
+                  <li *ngFor="let product of property"><b>Name - </b>{{
+                    product.name }} || <b>Price - </b>{{ product.price }} || <b>Year
+                      - </b>{{ product.year }}</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="card mb-3">
+              <div class="card-body">
+                <h5>ngClass</h5>
+                <hr>
+                <div
+                  [ngClass]="{ 'red' : textlengh.length > 5, 'green' : textlengh.length <= 5 }">
+                  <h3 class="p-2">Welcome</h3>
+                </div>
+                <h5>ngStyle</h5>
+                <hr>
+                <div
+                  [ngStyle]="{ 'color' : 'red', 'background-color' : 'yellow'}">
+                  <h3 class="p-2">Welcome</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="mt-4">ngmodel (Two Way Binding)</h5>
+                <hr>
+                <input type="text" [(ngModel)]="username" />
+                <p>Output: {{ username }}</p>
+                <hr>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

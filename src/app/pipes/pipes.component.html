@@ -1,0 +1,63 @@
+<section class="home">
+    <div class="container  my-5">
+        <div class="card">
+            <div class="card-header">
+                <h3>Pipes</h3>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <h5>Text cases</h5>
+                                <hr>
+                                <p><b>Orginal Output: </b>{{ name }}</p>
+                                <p><b>Uppercase Output: </b>{{ name | uppercase }}</p>
+                                <p><b>Lower Output: </b>{{ name | lowercase }}</p>
+                                <p><b>Test case Output: </b>{{ name | titlecase }}</p>
+                               
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <h5>Currency</h5>
+                                <hr>
+                                <p><b>Orginal: </b> {{ price }}</p>
+                                <p><b>INR: </b> {{ price | currency: 'INR' }}</p>
+                                <p><b>USD: </b> {{ price | currency: 'USD' }}</p>
+                                <p><b>EUR: </b> {{ price | currency: 'EUR' }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5>Date Case</h5>
+                                <hr>
+                                <p><b>Orginal Output: </b> {{ today }}</p>
+                                <p><b>Default Output: </b> {{ today | date }}</p>
+                                <p><b>Short Output: </b> {{ today | date:'short' }}</p>
+                                <p><b>Medium Output: </b> {{ today | date:'medium' }}</p>
+                                <p><b>Full Output: </b> {{ today | date:'full' }}</p>
+                                <p><b>Long Date:</b> {{ today | date:'longDate' }}</p>
+                                <p><b>Short Time:</b> {{ today | date:'shortTime' }}</p>
+                                <p><b>Medium Time:</b> {{ today | date:'mediumTime' }}</p>
+                                <p><b>Custom : </b> {{ today | date: 'dd-mm-yyyy': 'UTC' }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5>JSON</h5>
+                                <hr>
+                                <pre>{{ employees | json }}</pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

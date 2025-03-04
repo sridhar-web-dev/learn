@@ -6,3 +6,23 @@
 {
     background-color: green;
 }
+a
+{
+    text-decoration: none;
+    color: #252525;
+    font-weight: 500;
+}
+a:hover, .active
+{
+    color: green;
+}
+ul
+{
+    display: flex;
+    list-style: none;
+    margin-bottom: 0 !important;
+}
+ul li
+{
+    padding-right: 15px;
+}

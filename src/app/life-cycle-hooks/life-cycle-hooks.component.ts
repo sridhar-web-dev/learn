@@ -1,10 +1,11 @@
 import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit, Component, DoCheck, OnDestroy, OnInit } from '@angular/core';
+
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
+  selector: 'app-life-cycle-hooks',
+  templateUrl: './life-cycle-hooks.component.html',
+  styleUrls: ['./life-cycle-hooks.component.css']
 })
-export class AppComponent implements OnInit, DoCheck, AfterContentInit, AfterContentChecked, 
+export class LifeCycleHooksComponent implements OnInit, DoCheck, AfterContentInit, AfterContentChecked, 
 AfterViewInit, AfterViewChecked, OnDestroy {
   title = 'learn';
   islogin = false;
