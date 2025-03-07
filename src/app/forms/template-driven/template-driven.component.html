@@ -1,0 +1,56 @@
+<section class="home">
+    <div class="container  my-5">
+        <div class="card">
+            <div class="card-header">
+                <h3>Template Driven Form</h3>
+            </div>
+            <div class="card-body">
+                <form class="row" #contactFrom="ngForm" (submit)="onSubmit(contactFrom)">
+                    <div class="mb-3 col-lg-6">
+                        <label for="firstname" class="form-label">First Name</label>
+                        <input type="text" class="form-control" id="firstname" name="firstname" placeholder="Enter First Name" ngModel>
+                    </div>
+                    <div class="mb-3 col-lg-6">
+                        <label for="lastname" class="form-label">Last Name</label>
+                        <input type="text" class="form-control" name="lastname" id="lastname" placeholder="Enter Last Name" ngModel>
+                    </div>
+                    <div class="mb-3 col-lg-6">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" name="email" id="email" placeholder="Enter Email" ngModel>
+                    </div>
+                    <div class="mb-3 col-lg-6">
+                        <label for="phone" class="form-label">Phone
+                            Number</label>
+                        <input type="tel" class="form-control" name="phone" id="phone" placeholder="Enter Phone Number" ngModel>
+                    </div>
+                    <div class="mb-3 col-lg-6">
+                        <label for="gender" class="form-label">Gender</label>
+                        <select class="form-select" name="gender" id="gender" ngModel>
+                            <option value>Select Gender</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="mb-3 col-lg-6">
+                        <label for="country" class="form-label">Country</label>
+                        <select class="form-select" name="country" id="country" ngModel>
+                            <option value>Select Country</option>
+                            <option value="india">India</option>
+                            <option value="usa">USA</option>
+                            <option value="uk">UK</option>
+                            <option value="canada">Canada</option>
+                        </select>
+                    </div>
+                    <div class="mb-3 form-check  col-lg-6">
+                        <label for="gender" class="form-label d-block">Marital Status</label>
+                        <input type="checkbox" class="form-check-input" name="maritalStatus" id="maritalStatus" ngModel>
+                        <label class="form-check-label" for="maritalStatus">Married</label>
+                    </div>
+                    <button type="submit"
+                        class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

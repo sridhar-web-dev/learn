@@ -89,7 +89,7 @@ AfterViewInit, AfterViewChecked, OnDestroy {
 
   private logLifecycle(message: string) {
     this.lifecycleLogs.push(message);
-    console.log(message);
+    // console.log(message);
   }
   clearLogs() {
     this.lifecycleLogs = [];

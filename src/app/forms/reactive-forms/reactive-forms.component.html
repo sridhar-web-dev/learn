@@ -1,0 +1,58 @@
+<section class="home">
+    <div class="container  my-5">
+        <div class="card">
+            <div class="card-header">
+                <h3>Reactive Form</h3>
+            </div>
+            <div class="card-body">
+                <form class="row " [formGroup]="contactForm " (submit)="onSubmit()">
+                    <div class="mb-3 col-lg-6">
+                        <label for="firstname" class="form-label">First Name</label>
+                        <input type="text" class="form-control" formControlName="firstname" id="firstname"  placeholder="Enter First Name">
+                    </div>
+                    <div class="mb-3 col-lg-6">
+                        <label for="lastname" class="form-label">Last Name</label>
+                        <input type="text" class="form-control" formControlName="lastname" id="lastname" placeholder="Enter Last Name">
+                    </div>
+                    <div class="mb-3 col-lg-6">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" formControlName="email" id="email" placeholder="Enter Email">
+                    </div>
+                    <div class="mb-3 col-lg-6">
+                        <label for="phone" class="form-label">Phone
+                            Number</label>
+                        <input type="tel" class="form-control" formControlName="phone" id="phone" placeholder="Enter Phone Number">
+                    </div>
+                    <div class="mb-3 col-lg-6">
+                        <label for="gender" class="form-label">Gender</label>
+                        <select class="form-select" formControlName="gender" id="gender">
+                            <option value>Select Gender</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="mb-3 col-lg-6">
+                        <label for="country" class="form-label">Country</label>
+                        <select class="form-select" formControlName="country" id="country">
+                            <option value>Select Country</option>
+                            <option value="india">India</option>
+                            <option value="usa">USA</option>
+                            <option value="uk">UK</option>
+                            <option value="canada">Canada</option>
+                        </select>
+                    </div>
+                    <div class="mb-3 col-lg-6 form-check">
+                        <label for="gender" class="form-label d-block">Marital Status</label>
+                        <input type="checkbox" class="form-check-input" formControlName="maritalStatus"
+                            id="maritalStatus">
+                        <label class="form-check-label"
+                            for="maritalStatus">Married</label>
+                    </div>
+                    <button type="submit"
+                        class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

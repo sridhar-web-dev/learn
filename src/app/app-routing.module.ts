@@ -5,6 +5,8 @@ import { DirectivesComponent } from './directives/directives.component';
 import { LifeCycleHooksComponent } from './life-cycle-hooks/life-cycle-hooks.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
 import { PipesComponent } from './pipes/pipes.component';
+import { TemplateDrivenComponent } from './forms/template-driven/template-driven.component';
+import { ReactiveFormsComponent } from './forms/reactive-forms/reactive-forms.component';
 const routes: Routes = [
   {
     path: '',
@@ -25,6 +27,16 @@ const routes: Routes = [
   {
     path: 'pipes',
     component: PipesComponent
+  },
+  {
+    path: 'template-driven',
+    component: TemplateDrivenComponent
+
+  },
+  {
+    path: 'reactive-forms',
+    component: ReactiveFormsComponent
+
   },
   {
     path: '**', redirectTo: ''
